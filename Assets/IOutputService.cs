@@ -15,9 +15,21 @@ public interface IOutputService
     void Write(object value);
 
     /// <summary>
+    /// Writes any generic object and appends newline.
+    /// </summary>
+    /// <param name="value"></param>
+    void WriteLine(object value);
+
+
+    /// <summary>
     /// Write output using string.Format() or similar string sonstruction method.
     /// </summary>
     /// <param name="value"></param>
     /// <param name="values"></param>
     void WriteFormat(string value, params object[] values);
+
+    /// <summary>
+    /// Clears console if available.
+    /// </summary>
+    void Clear();
 }

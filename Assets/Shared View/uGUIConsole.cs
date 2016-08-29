@@ -11,6 +11,52 @@ using System;
 public class uGUIConsole : MonoBehaviour, IOutputService
 {
     /// <summary>
+    /// Locking object.
+    /// </summary>
+    private static object syncRoot = new object();
+
+    /// <summary>
+    /// Do not directly modify!
+    /// </summary>
+    private static volatile uGUIConsole _instance = null;
+
+    /// <summary>
+    /// Singleton instance accessor
+    /// </summary>
+    public static uGUIConsole Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                lock (syncRoot)
+                {
+                    _instance = FindObjectOfType<uGUIConsole>();
+
+                    if (_instance == null)
+                    {
+                        GameObject go = new GameObject("uGUIConsole");
+                        _instance = go.AddComponent<uGUIConsole>();
+                    }
+                }
+            }
+            return _instance;
+        }
+    }
+
+
+    /// <summary>
+    /// Ensures only one singleton exists in the scene.
+    /// </summary>
+    void Awake()
+    {
+        if (Instance != this)
+        {
+            Destroy(this);
+        }
+    }
+
+    /// <summary>
     /// Flag to write "missing component" error once.
     /// </summary>
     private bool warnOnce = false;
@@ -78,5 +124,22 @@ public class uGUIConsole : MonoBehaviour, IOutputService
         {
             Debug.Log(value);
         }
+    }
+
+    public void Clear()
+    {
+        if (text)
+        {
+            text.text = "";
+        }
+    }
+
+    /// <summary>
+    /// Writes a line to the console.
+    /// </summary>
+    /// <param name="value"></param>
+    public void WriteLine(object value)
+    {
+        Write(value.ToString() + "\n");
     }
 }
