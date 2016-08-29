@@ -25,6 +25,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ItMayBeAHack OOD Exercises
    </div>
+   <div id="projectbrief">An exercise in OOD as guided by ItMayBeAHack.com.</div>
   </td>
  </tr>
  </tbody>
@@ -94,10 +95,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Roulette.Wheel Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Responsible for:  
+ <a href="class_roulette_1_1_wheel.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a819a3a44ef2d2a4acd6663a29e91a89d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_wheel.html#a819a3a44ef2d2a4acd6663a29e91a89d">Wheel</a> (<a class="el" href="interface_roulette_1_1_i_bin_builder.html">IBinBuilder</a> binBuilder=null, int binSize=38, int rngSeed=int.MinValue)</td></tr>
+<tr class="memdesc:a819a3a44ef2d2a4acd6663a29e91a89d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new wheel, sets its random number generator, and has bin builder fill this wheel's bins.  <a href="#a819a3a44ef2d2a4acd6663a29e91a89d">More...</a><br /></td></tr>
 <tr class="separator:a819a3a44ef2d2a4acd6663a29e91a89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc937d29e4a57443ea34e6fa65b2c599"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_wheel.html#acc937d29e4a57443ea34e6fa65b2c599">GetBinSize</a> ()</td></tr>
 <tr class="memdesc:acc937d29e4a57443ea34e6fa65b2c599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of the bins array.  <a href="#acc937d29e4a57443ea34e6fa65b2c599">More...</a><br /></td></tr>
@@ -109,9 +114,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8151922a8e3d516558b1602c92aa0db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random bin from the bins array based on the random number generator.  <a href="#a8151922a8e3d516558b1602c92aa0db7">More...</a><br /></td></tr>
 <tr class="separator:a8151922a8e3d516558b1602c92aa0db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02e68ab319058afe680439da1365da39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_roulette_1_1_bin.html">Bin</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_wheel.html#a02e68ab319058afe680439da1365da39">GetBinAtIndex</a> (int index)</td></tr>
+<tr class="memdesc:a02e68ab319058afe680439da1365da39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_roulette_1_1_bin.html" title="A collection of Outcomes to be associated with a bin number in Wheel. ">Bin</a> at a specific index. For testing purposes.  <a href="#a02e68ab319058afe680439da1365da39">More...</a><br /></td></tr>
 <tr class="separator:a02e68ab319058afe680439da1365da39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Responsible for: </p>
+<ul>
+<li>Constructing and maintaining a list of bins (numbers that the wheel can land on) and their outcomes.</li>
+<li>Supplying a random bin to simulate a wheel spin. </li>
+</ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a819a3a44ef2d2a4acd6663a29e91a89d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -141,6 +153,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs a new wheel, sets its random number generator, and has bin builder fill this wheel's bins. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">binBuilder</td><td>Should only be null for testing. The BinBuilder that will fill the wheel's bins.</td></tr>
+    <tr><td class="paramname">binSize</td><td>Optional, default is 38 bins.</td></tr>
+    <tr><td class="paramname">rngSeed</td><td>Should only be set when testing.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -193,6 +215,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a <a class="el" href="class_roulette_1_1_bin.html" title="A collection of Outcomes to be associated with a bin number in Wheel. ">Bin</a> at a specific index. For testing purposes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the bin to retrieve.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="class_roulette_1_1_bin.html" title="A collection of Outcomes to be associated with a bin number in Wheel. ">Bin</a> from the 'bin' array.</dd></dl>
 
 </div>
 </div>
