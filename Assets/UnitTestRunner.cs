@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Test for the roulette simulation.
+/// </summary>
 namespace Roulette.Tests
 {
     /// <summary>

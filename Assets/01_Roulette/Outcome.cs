@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 
+/// <summary>
+/// A simulation of a roulette game.
+/// </summary>
 namespace Roulette
 {
     /// <summary>

@@ -5,11 +5,22 @@ using System.Text;
 
 namespace Roulette
 {
+	/// <summary>
+	/// Responsible for:
+	/// - Constructing and maintaining a list of bins (numbers that the wheel can land on) and their outcomes.
+	/// - Supplying a random bin to simulate a wheel spin.
+	/// </summary>
     public class Wheel
     {
         private Bin[] bins;
         private Random rng;
 
+		/// <summary>
+		/// Constructs a new wheel, sets its random number generator, and has bin builder fill this wheel's bins.
+		/// </summary>
+		/// <param name="binBuilder">Should only be null for testing. The BinBuilder that will fill the wheel's bins.</param>
+		/// <param name="binSize">Optional, default is 38 bins.</param>
+		/// <param name="rngSeed">Should only be set when testing.</param>
         public Wheel(IBinBuilder binBuilder = null, int binSize = 38, int rngSeed = int.MinValue)
         {
             bins = new Bin[binSize];
@@ -70,6 +81,12 @@ namespace Roulette
             return bins[next];
         }
 
+
+		/// <summary>
+		/// Returns a Bin at a specific index. For testing purposes.
+		/// </summary>
+		/// <param name="index">The index of the bin to retrieve.</param>
+		/// <returns>A Bin from the 'bin' array.</returns>
         public Bin GetBinAtIndex(int index)
         {
             if (index < 0 || index >= bins.Length)
