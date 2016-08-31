@@ -18,12 +18,34 @@ namespace Roulette.Tests
             }
         }
 
-        void Start()
+		#region Tests to run.
+		public bool outcomeTests = true;
+		public bool binTests = true;
+		public bool wheelTests = true;
+		public bool binBuilderUsTests = true;
+		public bool betTests = true;
+		public bool tableTests = true;
+		#endregion
+
+
+		/// <summary>
+		/// Runs tests that have been selected in the inspector.
+		/// </summary>
+		void Start()
         {
-            //RunOutcomeTests();
-            //RunBinTests();
-            //RunWheelTests();
-            RunBinBuilderUSTests();
+			if (outcomeTests)
+				RunOutcomeTests();
+			if (binTests)
+				RunBinTests();
+			if (wheelTests)
+				RunWheelTests();
+			if (binBuilderUsTests)
+				RunBinBuilderUSTests();
+			if (betTests)
+				RunBetTests();
+			if (tableTests)
+				RunTableTests();
+
         }
 
 
@@ -36,7 +58,7 @@ namespace Roulette.Tests
             Outcome_Tests outcome_tests = new Outcome_Tests(console);
 
             bool pass = true;
-            ushort testCount = 100;
+			ushort testCount = 100;
             for (int i = 0; i < testCount; i++)
             {
                 if (!outcome_tests.TestEqualityComparer(testCount))
@@ -64,9 +86,18 @@ namespace Roulette.Tests
                 console.WriteLine("Outcome_Tests.TestWinAmounts() - all tests passed");
             else
                 console.WriteLine("Outcome_Tests.TestWinAmounts() - tests failed");
-        }
 
+			pass = outcome_tests.TestToString();
+			if (pass)
+				console.WriteLine("Outcome_Tests.TestToString() - all tests passed");
+			else
+				console.WriteLine("Outcome_Tests.TestToString() - tests failed");
+		}
 
+		
+		/// <summary>
+		/// Runs tests for the Bin class.
+		/// </summary>
         void RunBinTests()
         {
             Bin_Tests binTests = new Bin_Tests(console);
@@ -75,8 +106,17 @@ namespace Roulette.Tests
                 console.WriteLine("Bin_Tests.Test() - all tests pased");
             else
                 console.WriteLine("Bin_Tests.Test() - tests failed");
-        }
 
+			if (binTests.TestToString())
+				console.WriteLine("Bin_Tests.TestToString() - all tests pased");
+			else
+				console.WriteLine("Bin_Tests.TestToString() - tests failed");
+		}
+
+
+		/// <summary>
+		/// Runs tests for the Wheel class.
+		/// </summary>
         void RunWheelTests()
         {
             Wheel_Tests wheelTests = new Wheel_Tests(console);
@@ -84,10 +124,19 @@ namespace Roulette.Tests
                 console.WriteLine("Wheel_Tests.TestGetRandomBin() - all tests pased");
             else
                 console.WriteLine("Wheel_Tests.TestGetRandomBin() - tests failed");
-        }
 
-        // See RouletteTableLayout.png to compare these results with.
-        void RunBinBuilderUSTests()
+			if (wheelTests.TestOutcomesDictionary())
+				console.WriteLine("Wheel_Tests.TestOutcomesDictionary() - all tests pased");
+			else
+				console.WriteLine("Wheel_Tests.TestOutcomesDictionary() - tests failed");
+		}
+
+		
+		/// <summary>
+		/// Runs tests for the BinBuilderUS class.
+		/// See RouletteTableLayout.png to compare these results with.
+		/// </summary>
+		void RunBinBuilderUSTests()
         {
             BinBuilderUS_Tests bbusTests = new BinBuilderUS_Tests(console);
 
@@ -102,5 +151,44 @@ namespace Roulette.Tests
 			//bbusTests.DisplayCornerBets();
 			bbusTests.DisplayAll();
         }
+
+
+		/// <summary>
+		/// Runs tests for the Bets class.
+		/// </summary>
+		void RunBetTests()
+		{
+			Bet_Tests betTests = new Bet_Tests(console);
+			if (betTests.TestWinAmount())
+				console.WriteLine("Bet_Tests.TestWinAndLoseAmounts() - all tests pased");
+			else
+				console.WriteLine("Bet_Tests.TestWinAndLoseAmounts() - tests failed");
+
+			if (betTests.TestToString())
+				console.WriteLine("Bet_Tests.TestToString() - all tests pased");
+			else
+				console.WriteLine("Bet_Tests.TestToString() - tests failed");
+
+			if (betTests.TestToString())
+				console.WriteLine("Bet_Tests.TestToString() - all tests pased");
+			else
+				console.WriteLine("Bet_Tests.TestToString() - tests failed");
+		}
+
+
+		/// <summary>
+		/// Runs tests on the Table class.
+		/// </summary>
+		void  RunTableTests()
+		{
+			Table_Tests tt = new Table_Tests(console);
+
+			//tt.DisplayToStringMethods();
+
+			if (tt.Tests())
+				console.WriteLine("Table_Tests.Tests() - all tests pased");
+			else
+				console.WriteLine("Table_Tests.Tests() - tests failed");
+		}
     }
 }

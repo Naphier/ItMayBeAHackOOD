@@ -68,6 +68,8 @@ namespace Roulette
                 bins[index] = new Bin(outcome);
             else
                 bins[index].Add(outcome);
+
+			AddOutcomeToDictionary(outcome);
         }
 
 
@@ -106,8 +108,8 @@ namespace Roulette
 		/// <summary>
 		/// Adds an outcome to the outcome dictionary if it is not already there.
 		/// </summary>
-		/// <param name="outcome">Outcome to add to the list.</param>
-		public void AddOutcome(Outcome outcome)
+		/// <param name="outcome">Outcome to add to the dictionary.</param>
+		private void AddOutcomeToDictionary(Outcome outcome)
 		{
 			if (!outcomes.ContainsKey(outcome.name))
 				outcomes.Add(outcome.name, outcome);

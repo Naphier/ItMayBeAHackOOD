@@ -102,5 +102,19 @@ namespace Roulette.Tests
                 wheel.AddOutcomeToBin(i, outcome);
             }
         }
+
+		public bool TestOutcomesDictionary()
+		{
+			BinBuilderUS bbus = new BinBuilderUS();
+			Wheel wheel = new Wheel(bbus);
+
+
+			if (wheel.GetOutcome("0") == null)
+			{
+				return false;
+			}
+
+			return true;
+		}
     }
 }

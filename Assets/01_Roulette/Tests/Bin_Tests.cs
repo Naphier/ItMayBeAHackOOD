@@ -29,8 +29,6 @@ namespace Roulette.Tests
             Outcome d = new Outcome("d", 4);
             
             Bin bin = new Bin(a, b, c);
-            
-            _console.WriteLine("ToString(): " + bin.ToString());
 
             if (!bin.Contains(a))
             {
@@ -55,8 +53,26 @@ namespace Roulette.Tests
                 _console.WriteLine("FAILURE! bin should not contain Outcome: " + c.ToString());
                 pass = false;
             }
-
             return pass;
         }
+
+
+		public bool TestToString()
+		{
+			Outcome a = new Outcome("a", 1);
+			Outcome b = new Outcome("b", 2);
+			Outcome c = new Outcome("c", 3);
+			Outcome d = new Outcome("d", 4);
+
+			Bin bin = new Bin(a, b, c, d);
+
+			if (string.IsNullOrEmpty(bin.ToString()))
+				return false;
+
+			if (string.IsNullOrEmpty(bin.ToString(",")))
+				return false;
+
+			return true;
+		}
     }
 }

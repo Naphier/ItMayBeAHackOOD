@@ -14,6 +14,13 @@ namespace Roulette.Tests
             _console = console;
         }
         
+		public bool TestToString()
+		{
+			Outcome outcome = new Outcome("a", 1);
+			if (string.IsNullOrEmpty(outcome.ToString()))
+				return false;
+			return true;
+		}
 
         /// <summary>
         /// Tests for equality operations (== , !=, Equals(), List.Contains(), and Dictionary.ContainsKey()).
@@ -167,9 +174,9 @@ namespace Roulette.Tests
             for (ushort i = 1; i <= iterations; i++)
             {
                 Outcome a = new Outcome(i.ToString(), i);
-                float amount = (float)r.Next(1, iterations) + ((float)r.Next(1, iterations) / (float)iterations);
-                float expected = i * amount;
-                float actual = a.GetWinAmount(amount);
+                int amount = r.Next(1, iterations) + (r.Next(1, iterations) / iterations);
+                int expected = i * amount;
+                int actual = a.GetWinAmount((ushort)amount);
                 if (actual != expected)
                 {
                     pass = false;

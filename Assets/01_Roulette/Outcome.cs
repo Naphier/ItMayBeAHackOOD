@@ -1,3 +1,5 @@
+using System;
+
 /// <summary>
 /// A simulation of a roulette game.
 /// </summary>
@@ -19,6 +21,9 @@ namespace Roulette
         /// <param name="odds">The payout odds.</param>
         public Outcome(string name, ushort odds)
         {
+			if (string.IsNullOrEmpty(name))
+				throw new ArgumentNullException("name");
+
             this.name = name;
             this.odds = odds;
         }
@@ -28,7 +33,7 @@ namespace Roulette
         /// </summary>
         /// <param name="amount">The amount of the bet.</param>
         /// <returns>The payout amount.</returns>
-        public float GetWinAmount(float amount)
+        public int GetWinAmount(ushort amount)
         {
             return odds * amount;
         }
@@ -76,7 +81,7 @@ namespace Roulette
         /// <returns>User friendly string representation of this object.</returns>
         public override string ToString()
         {
-            return string.Format("{0} | {1}:1", name, odds);
+            return string.Format("'{0}' @ {1}:1", name, odds);
         }
     }
 }
