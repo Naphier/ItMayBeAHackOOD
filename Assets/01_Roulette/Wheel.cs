@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Roulette
 {
@@ -9,12 +7,17 @@ namespace Roulette
 	/// Responsible for:
 	/// - Constructing and maintaining a list of bins (numbers that the wheel can land on) and their outcomes.
 	/// - Supplying a random bin to simulate a wheel spin.
+	/// - Maintiains a unique list of outcomes available for this wheel.
 	/// </summary>
     public class Wheel
     {
         private Bin[] bins;
         private Random rng;
-
+		/// <summary>
+		/// A unique list of outcomes. Should only be accessed through methods.
+		/// </summary>
+		private Dictionary<string, Outcome> outcomes = new Dictionary<string, Outcome>();
+		
 		/// <summary>
 		/// Constructs a new wheel, sets its random number generator, and has bin builder fill this wheel's bins.
 		/// </summary>
@@ -98,5 +101,30 @@ namespace Roulette
 
             return bins[index];
         }
+
+
+		/// <summary>
+		/// Adds an outcome to the outcome dictionary if it is not already there.
+		/// </summary>
+		/// <param name="outcome">Outcome to add to the list.</param>
+		public void AddOutcome(Outcome outcome)
+		{
+			if (!outcomes.ContainsKey(outcome.name))
+				outcomes.Add(outcome.name, outcome);
+		}
+
+
+		/// <summary>
+		/// Retrieves outcome from the outcome dictionary by name.
+		/// </summary>
+		/// <param name="name">Name of the outcome.</param>
+		/// <returns>An outcome if found otherwise null.</returns>
+		public Outcome GetOutcome(string name)
+		{
+			if (outcomes.ContainsKey(name))
+				return outcomes[name];
+
+			return null;
+		}
     }
 }

@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Roulette.Tests
 {
@@ -53,7 +50,7 @@ namespace Roulette.Tests
             randoms = GetRngValues(BIN_SIZE, SEED, BIN_SIZE - 1);
             ConstuctBins(wheel);
 
-            Bin unexpectedBin = new Bin(Outcome.GetOrCreate("unexpectedBin", ushort.MaxValue));
+            Bin unexpectedBin = new Bin(new Outcome("unexpectedBin", ushort.MaxValue));
 
             for (int i = 0; i < randoms.Length; i++)
             {
@@ -101,7 +98,7 @@ namespace Roulette.Tests
             for (int i = 0; i < BIN_SIZE; i++)
             {
                 string name = ((char)(i + 48)).ToString();
-                Outcome outcome = Outcome.GetOrCreate(name, (ushort)i);
+                Outcome outcome = new Outcome(name, (ushort)i);
                 wheel.AddOutcomeToBin(i, outcome);
             }
         }

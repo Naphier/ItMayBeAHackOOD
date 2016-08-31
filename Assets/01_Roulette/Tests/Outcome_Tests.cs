@@ -31,9 +31,9 @@ namespace Roulette.Tests
             ushort randomValue1 = (ushort)rng.Next(1, testCount);
             ushort randomValue2 = (ushort)rng.Next(1, testCount);
 
-            Outcome a = Outcome.GetOrCreate(str1, randomValue1);
-            Outcome b = Outcome.GetOrCreate(str1, randomValue1);
-            Outcome c = Outcome.GetOrCreate(str2, randomValue2);
+            Outcome a = new Outcome(str1, randomValue1);
+            Outcome b = new Outcome(str1, randomValue1);
+            Outcome c = new Outcome(str2, randomValue2);
 
             bool pass = true;
 
@@ -126,7 +126,7 @@ namespace Roulette.Tests
             bool pass = true;
             try
             {
-                Outcome.GetOrCreate(null);
+                new Outcome(null, 1);
             }
             catch (Exception e)
             {
@@ -142,21 +142,6 @@ namespace Roulette.Tests
             {
                 _console.WriteLine("GetOrCreate with null name did not throw an exception!");
                 pass = false;
-            }
-
-            exc = false;
-            try
-            {
-                Outcome.GetOrCreate("a");
-            }
-            catch (Exception e)
-            {
-                if (displayExceptions)
-                {
-                    _console.Write(e);
-                    _console.Write("\n\n");
-                }
-                exc = true;
             }
 
             if (!exc)
@@ -181,7 +166,7 @@ namespace Roulette.Tests
             Random r = new Random();
             for (ushort i = 1; i <= iterations; i++)
             {
-                Outcome a = Outcome.GetOrCreate(i.ToString(), i);
+                Outcome a = new Outcome(i.ToString(), i);
                 float amount = (float)r.Next(1, iterations) + ((float)r.Next(1, iterations) / (float)iterations);
                 float expected = i * amount;
                 float actual = a.GetWinAmount(amount);

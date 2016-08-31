@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Roulette.Tests
 {
@@ -26,10 +23,10 @@ namespace Roulette.Tests
         {
             bool pass = true;
 
-            Outcome a = Outcome.GetOrCreate("a", 1);
-            Outcome b = Outcome.GetOrCreate("b", 2);
-            Outcome c = Outcome.GetOrCreate("c", 3);
-            Outcome d = Outcome.GetOrCreate("d", 4);
+            Outcome a = new Outcome("a", 1);
+            Outcome b = new Outcome("b", 2);
+            Outcome c = new Outcome("c", 3);
+            Outcome d = new Outcome("d", 4);
             
             Bin bin = new Bin(a, b, c);
             

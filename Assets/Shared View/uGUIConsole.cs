@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System;
 
 /// <summary>
 /// Handles output to a Unity Input Field via IOutputService implementation.

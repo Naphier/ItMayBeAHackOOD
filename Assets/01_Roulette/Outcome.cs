@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 /// <summary>
 /// A simulation of a roulette game.
 /// </summary>
@@ -7,63 +5,23 @@ namespace Roulette
 {
     /// <summary>
     /// Responsible for representing the various Outcomes for the Roulette game.
-    /// Each Outcome is unique and comparable by its name. 
-    /// There cannot be mutiple odds for the same Outcome.
-    /// Constructed through GetOrCreate() which maintains a list of available Outcomes.
-    /// Likewise, existing Outcomes are accessed by GetOrCreate() to prevent duplication
-    /// of an Outcome name with different odds.
+    /// Each Outcome is comparable by its name. 
     /// </summary>
     public class Outcome
     {
-        private string name;
-        private ushort odds;
+        public string name { get; private set; }
+        public ushort odds { get; private set; }
 
         /// <summary>
-        /// Construction should only happen through GetOrCreate().
+        /// Constructions a new outcome.
         /// </summary>
         /// <param name="name">Unique name.</param>
         /// <param name="odds">The payout odds.</param>
-        private Outcome(string name, ushort odds)
+        public Outcome(string name, ushort odds)
         {
             this.name = name;
             this.odds = odds;
         }
-
-        private static List<Outcome> _outcomeList = new List<Outcome>();
-
-        /// <summary>
-        /// Get already existing Outcomes by name or create a new one by supplying the odds parameter.
-        /// </summary>
-        /// <param name="name">Use only this if looking up the Outcome.</param>
-        /// <param name="odds">Required for creating a new Outcome. Optional for lookup.</param>
-        /// <returns></returns>
-        public static Outcome GetOrCreate(string name, ushort? odds = null)
-        {
-            if (string.IsNullOrEmpty(name))
-            {
-                throw new System.ArgumentNullException("name");
-            }
-
-            foreach (var item in _outcomeList)
-            {
-                if (item.name == name)
-                    return item;
-            }
-
-            if (odds == null)
-            {
-                throw new System.ArgumentException("Outcome Factory could not find an Outcome with name: '" + name +
-                    "'. A value for odds must be supplied to create a new Outcome.");
-            }
-
-            Outcome outcome = new Outcome(name, (ushort)odds);
-
-            if (!_outcomeList.Contains(outcome))
-                _outcomeList.Add(outcome);
-
-            return outcome;
-        }
-
 
         /// <summary>
         /// Returns the payout amount based on the odds.

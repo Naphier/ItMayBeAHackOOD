@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Roulette
 {
@@ -70,7 +67,7 @@ namespace Roulette
             for (int column = 0; column < 3; column++)
             {
                 name = NAME_COLUMN_BET + (column + 1).ToString();
-                Outcome outcome = Outcome.GetOrCreate(name, ODDS_COLUMN_BET);
+                Outcome outcome = new Outcome(name, ODDS_COLUMN_BET);
 
                 for (int row = 0; row < 12; row++)
                 {
@@ -99,10 +96,10 @@ namespace Roulette
 					firstColumnNumber + 3,
 					firstColumnNumber + 4);
 
-				wheel.AddOutcomeToBin(firstColumnNumber, Outcome.GetOrCreate(name, ODDS_CORNER_BET));
-				wheel.AddOutcomeToBin(firstColumnNumber + 1, Outcome.GetOrCreate(name, ODDS_CORNER_BET));
-				wheel.AddOutcomeToBin(firstColumnNumber + 3, Outcome.GetOrCreate(name, ODDS_CORNER_BET));
-				wheel.AddOutcomeToBin(firstColumnNumber + 4, Outcome.GetOrCreate(name, ODDS_CORNER_BET));
+				wheel.AddOutcomeToBin(firstColumnNumber, new Outcome(name, ODDS_CORNER_BET));
+				wheel.AddOutcomeToBin(firstColumnNumber + 1, new Outcome(name, ODDS_CORNER_BET));
+				wheel.AddOutcomeToBin(firstColumnNumber + 3, new Outcome(name, ODDS_CORNER_BET));
+				wheel.AddOutcomeToBin(firstColumnNumber + 4, new Outcome(name, ODDS_CORNER_BET));
 
 				int secondColumnNumber = 3 * row + 2;
 				name = string.Format(
@@ -112,10 +109,10 @@ namespace Roulette
 					secondColumnNumber + 3,
 					secondColumnNumber + 4);
 
-				wheel.AddOutcomeToBin(secondColumnNumber, Outcome.GetOrCreate(name, ODDS_CORNER_BET));
-				wheel.AddOutcomeToBin(secondColumnNumber + 1, Outcome.GetOrCreate(name, ODDS_CORNER_BET));
-				wheel.AddOutcomeToBin(secondColumnNumber + 3, Outcome.GetOrCreate(name, ODDS_CORNER_BET));
-				wheel.AddOutcomeToBin(secondColumnNumber + 4, Outcome.GetOrCreate(name, ODDS_CORNER_BET));
+				wheel.AddOutcomeToBin(secondColumnNumber, new Outcome(name, ODDS_CORNER_BET));
+				wheel.AddOutcomeToBin(secondColumnNumber + 1, new Outcome(name, ODDS_CORNER_BET));
+				wheel.AddOutcomeToBin(secondColumnNumber + 3, new Outcome(name, ODDS_CORNER_BET));
+				wheel.AddOutcomeToBin(secondColumnNumber + 4, new Outcome(name, ODDS_CORNER_BET));
 			}
 		}
 
@@ -136,7 +133,7 @@ namespace Roulette
                     (12 * d + 11 + 1)
                     );
 
-                Outcome outcome = Outcome.GetOrCreate(name, ODDS_DOZEN_BET);
+                Outcome outcome = new Outcome(name, ODDS_DOZEN_BET);
 
                 for (int m = 0; m < 12; m++)
                 {
@@ -153,12 +150,12 @@ namespace Roulette
         /// <param name="wheel">The wheel to add the bin-outcomes to.</param>
         public void GenerateEvenMoneyBets(Wheel wheel)
         {
-            Outcome red = Outcome.GetOrCreate(NAME_RED_BET, ODDS_EVEN_BET);
-            Outcome black = Outcome.GetOrCreate(NAME_BLACK_BET, ODDS_EVEN_BET);
-            Outcome even = Outcome.GetOrCreate(NAME_EVEN_BET, ODDS_EVEN_BET);
-            Outcome odd = Outcome.GetOrCreate(NAME_ODD_BET, ODDS_EVEN_BET);
-            Outcome high = Outcome.GetOrCreate(NAME_HIGH_BET, ODDS_EVEN_BET);
-            Outcome low = Outcome.GetOrCreate(NAME_LOW_BET, ODDS_EVEN_BET);
+            Outcome red = new Outcome(NAME_RED_BET, ODDS_EVEN_BET);
+            Outcome black = new Outcome(NAME_BLACK_BET, ODDS_EVEN_BET);
+            Outcome even = new Outcome(NAME_EVEN_BET, ODDS_EVEN_BET);
+            Outcome odd = new Outcome(NAME_ODD_BET, ODDS_EVEN_BET);
+            Outcome high = new Outcome(NAME_HIGH_BET, ODDS_EVEN_BET);
+            Outcome low = new Outcome(NAME_LOW_BET, ODDS_EVEN_BET);
 
             for (int i = 1; i < 37; i++)
             {
@@ -189,7 +186,7 @@ namespace Roulette
 		/// <param name="wheel">The wheel to add the bin-outcomes to.</param>
 		public void GenerateFiveBet(Wheel wheel)
 		{
-			Outcome fiveBet = Outcome.GetOrCreate(NAME_FIVE_BET, ODDS_FIVE_BET);
+			Outcome fiveBet = new Outcome(NAME_FIVE_BET, ODDS_FIVE_BET);
 			wheel.AddOutcomeToBin(37, fiveBet);
 			for (int i = 0; i <= 3; i++)
 			{
@@ -215,7 +212,7 @@ namespace Roulette
                     firstColumnNumber + 5
                     );
 
-                Outcome outcome = Outcome.GetOrCreate(name, ODDS_LINE_BET);
+                Outcome outcome = new Outcome(name, ODDS_LINE_BET);
 
                 for (int i = 0; i <= 5; i++)
                 {
@@ -244,8 +241,8 @@ namespace Roulette
                     firstColumnNuber,
                     firstColumnNuber + 1);
 
-                wheel.AddOutcomeToBin(firstColumnNuber, Outcome.GetOrCreate(name, ODDS_SPLIT_BET));
-                wheel.AddOutcomeToBin(firstColumnNuber + 1, Outcome.GetOrCreate(name, ODDS_SPLIT_BET));
+                wheel.AddOutcomeToBin(firstColumnNuber, new Outcome(name, ODDS_SPLIT_BET));
+                wheel.AddOutcomeToBin(firstColumnNuber + 1, new Outcome(name, ODDS_SPLIT_BET));
 
                 int secondColumnNumber = 3 * row + 2; //2, 5, 8, ..., 35
                 name = string.Format(
@@ -253,8 +250,8 @@ namespace Roulette
                     secondColumnNumber,
                     secondColumnNumber + 1);
 
-                wheel.AddOutcomeToBin(secondColumnNumber, Outcome.GetOrCreate(name, ODDS_SPLIT_BET));
-                wheel.AddOutcomeToBin(secondColumnNumber + 1, Outcome.GetOrCreate(name, ODDS_SPLIT_BET));
+                wheel.AddOutcomeToBin(secondColumnNumber, new Outcome(name, ODDS_SPLIT_BET));
+                wheel.AddOutcomeToBin(secondColumnNumber + 1, new Outcome(name, ODDS_SPLIT_BET));
             }
 
             // Generate up-down split bets
@@ -266,8 +263,8 @@ namespace Roulette
                     i + 3
                     );
 
-                wheel.AddOutcomeToBin(i, Outcome.GetOrCreate(name, ODDS_SPLIT_BET));
-                wheel.AddOutcomeToBin(i + 3, Outcome.GetOrCreate(name, ODDS_SPLIT_BET));
+                wheel.AddOutcomeToBin(i, new Outcome(name, ODDS_SPLIT_BET));
+                wheel.AddOutcomeToBin(i + 3, new Outcome(name, ODDS_SPLIT_BET));
             }
         }
 
@@ -279,14 +276,14 @@ namespace Roulette
         public void GenerateStraightBets(Wheel wheel)
         {
             // Zero
-            wheel.AddOutcomeToBin(0, Outcome.GetOrCreate("0", ODDS_STRAIGHT_BET));
+            wheel.AddOutcomeToBin(0, new Outcome("0", ODDS_STRAIGHT_BET));
             
             // Double Zero
-            wheel.AddOutcomeToBin(37, Outcome.GetOrCreate("00", ODDS_STRAIGHT_BET));
+            wheel.AddOutcomeToBin(37, new Outcome("00", ODDS_STRAIGHT_BET));
 
             for (int i = 1; i < 37; i++)
             {
-                wheel.AddOutcomeToBin(i, Outcome.GetOrCreate(i.ToString(), ODDS_STRAIGHT_BET));
+                wheel.AddOutcomeToBin(i, new Outcome(i.ToString(), ODDS_STRAIGHT_BET));
             }
         }
 
@@ -308,7 +305,7 @@ namespace Roulette
                     firstColumnNumber + 1, 
                     firstColumnNumber + 2);
 
-                Outcome outcome = Outcome.GetOrCreate(name, ODDS_STREET_BET);
+                Outcome outcome = new Outcome(name, ODDS_STREET_BET);
 
                 wheel.AddOutcomeToBin(firstColumnNumber, outcome);
                 wheel.AddOutcomeToBin(firstColumnNumber + 1, outcome);
