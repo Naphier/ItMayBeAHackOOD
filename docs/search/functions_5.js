@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['game',['Game',['../class_roulette_1_1_game.html#a9a3cb3f1ccbab3e957371ae3cebb50db',1,'Roulette::Game']]],
   ['generatecolumnbets',['GenerateColumnBets',['../class_roulette_1_1_bin_builder_u_s.html#a23fcc3988dffc93c32499242197833ba',1,'Roulette.BinBuilderUS.GenerateColumnBets()'],['../interface_roulette_1_1_i_bin_builder.html#a4ede56e1849a3c6b954e110e46bd856f',1,'Roulette.IBinBuilder.GenerateColumnBets()']]],
   ['generatecornerbets',['GenerateCornerBets',['../class_roulette_1_1_bin_builder_u_s.html#a489fbc6b30623ef73be4274e911b8f9e',1,'Roulette.BinBuilderUS.GenerateCornerBets()'],['../interface_roulette_1_1_i_bin_builder.html#a74649f3c5e225d6e4ecaef55f4a02041',1,'Roulette.IBinBuilder.GenerateCornerBets()']]],
   ['generatedozenbets',['GenerateDozenBets',['../class_roulette_1_1_bin_builder_u_s.html#a4010205d882cc4468d759eda09302f44',1,'Roulette.BinBuilderUS.GenerateDozenBets()'],['../interface_roulette_1_1_i_bin_builder.html#a8b4009640ae42553bb5d88acd7028aaf',1,'Roulette.IBinBuilder.GenerateDozenBets()']]],
@@ -12,8 +13,8 @@ var searchData=
   ['getbinatindex',['GetBinAtIndex',['../class_roulette_1_1_wheel.html#a02e68ab319058afe680439da1365da39',1,'Roulette::Wheel']]],
   ['getbinsize',['GetBinSize',['../class_roulette_1_1_wheel.html#acc937d29e4a57443ea34e6fa65b2c599',1,'Roulette::Wheel']]],
   ['gethashcode',['GetHashCode',['../class_roulette_1_1_outcome.html#a4b8c62ce5c345a4ba0d9f9de76ea5bbf',1,'Roulette::Outcome']]],
-  ['getorcreate',['GetOrCreate',['../class_roulette_1_1_outcome.html#a88660a79aecfee12aba2904e35e12d3d',1,'Roulette::Outcome']]],
+  ['getoutcome',['GetOutcome',['../class_roulette_1_1_wheel.html#a577d676a40f1fc8bebc3320be80a3bdf',1,'Roulette::Wheel']]],
   ['getrandombin',['GetRandomBin',['../class_roulette_1_1_wheel.html#a8151922a8e3d516558b1602c92aa0db7',1,'Roulette::Wheel']]],
   ['getrngvalues',['GetRngValues',['../class_roulette_1_1_tests_1_1_wheel___tests.html#ade806d378080256ef4417f03f54aa4be',1,'Roulette::Tests::Wheel_Tests']]],
-  ['getwinamount',['GetWinAmount',['../class_roulette_1_1_outcome.html#ae3d56f23346c88e7258c2a1265284c58',1,'Roulette::Outcome']]]
+  ['getwinamount',['GetWinAmount',['../class_roulette_1_1_bet.html#a9a0948197afe70d7a31606a81d77459f',1,'Roulette.Bet.GetWinAmount()'],['../class_roulette_1_1_outcome.html#ad11647352d8ecb98050cfe88e266b6cb',1,'Roulette.Outcome.GetWinAmount()']]]
 ];

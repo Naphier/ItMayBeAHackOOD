@@ -114,5 +114,10 @@ namespace Roulette
 			return sb.ToString();
 		}
 
+
+		public void ClearBets()
+		{
+			bets.Clear();
+		}
 	}
 }

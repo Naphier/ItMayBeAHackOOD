@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['outcome',['Outcome',['../class_roulette_1_1_outcome.html',1,'Roulette']]],
-  ['outcome_5ftests',['Outcome_Tests',['../class_roulette_1_1_tests_1_1_outcome___tests.html',1,'Roulette::Tests']]]
+  ['ibinbuilder',['IBinBuilder',['../interface_roulette_1_1_i_bin_builder.html',1,'Roulette']]],
+  ['ioutputservice',['IOutputService',['../interface_i_output_service.html',1,'']]]
 ];

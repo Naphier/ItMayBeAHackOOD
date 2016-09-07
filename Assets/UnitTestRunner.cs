@@ -25,6 +25,7 @@ namespace Roulette.Tests
 		public bool binBuilderUsTests = true;
 		public bool betTests = true;
 		public bool tableTests = true;
+		public bool runP57Demo = true;
 		#endregion
 
 
@@ -45,8 +46,10 @@ namespace Roulette.Tests
 				RunBetTests();
 			if (tableTests)
 				RunTableTests();
+			if (runP57Demo)
+				RunGameDemoP57();
 
-        }
+		}
 
 
         /// <summary>
@@ -189,6 +192,13 @@ namespace Roulette.Tests
 				console.WriteLine("Table_Tests.Tests() - all tests pased");
 			else
 				console.WriteLine("Table_Tests.Tests() - tests failed");
+		}
+
+
+		void RunGameDemoP57()
+		{
+			GameDemoPassenger57 demo = new GameDemoPassenger57();
+			demo.Main(console);
 		}
     }
 }

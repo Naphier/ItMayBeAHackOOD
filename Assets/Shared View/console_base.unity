@@ -438,11 +438,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd27fb27401a6540a8aec0fa80b02a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outcomeTests: 1
-  binTests: 1
-  wheelTests: 1
+  outcomeTests: 0
+  binTests: 0
+  wheelTests: 0
   binBuilderUsTests: 0
-  betTests: 1
+  betTests: 0
+  tableTests: 0
+  runP57Demo: 1
 --- !u!4 &1263915390
 Transform:
   m_ObjectHideFlags: 0

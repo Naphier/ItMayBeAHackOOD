@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['wheel',['Wheel',['../class_roulette_1_1_wheel.html',1,'Roulette']]],
-  ['wheel',['Wheel',['../class_roulette_1_1_wheel.html#a819a3a44ef2d2a4acd6663a29e91a89d',1,'Roulette::Wheel']]],
-  ['wheel_2ecs',['Wheel.cs',['../_wheel_8cs.html',1,'']]],
-  ['wheel_5ftests',['Wheel_Tests',['../class_roulette_1_1_tests_1_1_wheel___tests.html',1,'Roulette::Tests']]],
-  ['wheel_5ftests',['Wheel_Tests',['../class_roulette_1_1_tests_1_1_wheel___tests.html#a23fec82cb40465254b4fe764fbd532c0',1,'Roulette::Tests::Wheel_Tests']]],
-  ['wheel_5ftests_2ecs',['Wheel_Tests.cs',['../_wheel___tests_8cs.html',1,'']]],
-  ['write',['Write',['../interface_i_output_service.html#af8da6d5ca9282cf108822712c9a8a00c',1,'IOutputService.Write()'],['../classu_g_u_i_console.html#aad64b1c261ca11b350a71431293e0964',1,'uGUIConsole.Write()']]],
-  ['writeformat',['WriteFormat',['../interface_i_output_service.html#a639ab053536e6c8bdbefa99389e09e0e',1,'IOutputService.WriteFormat()'],['../classu_g_u_i_console.html#af48bec074e4d9bfd512716523b1e0974',1,'uGUIConsole.WriteFormat()']]],
-  ['writeline',['WriteLine',['../interface_i_output_service.html#af9b405471058c054fc1bc4d0619c1a56',1,'IOutputService.WriteLine()'],['../classu_g_u_i_console.html#a4bdac3104e04b99463ecf2b9141fd4b2',1,'uGUIConsole.WriteLine()']]]
+  ['passenger57',['Passenger57',['../class_roulette_1_1_passenger57.html',1,'Roulette']]],
+  ['passenger57',['Passenger57',['../class_roulette_1_1_passenger57.html#aa6c1110e0df7e2683521dc712a9e4099',1,'Roulette::Passenger57']]],
+  ['passenger57_2ecs',['Passenger57.cs',['../_passenger57_8cs.html',1,'']]],
+  ['placebet',['PlaceBet',['../class_roulette_1_1_table.html#a6e55c3eb784d13b61581650cf09cc409',1,'Roulette::Table']]],
+  ['placebets',['PlaceBets',['../class_roulette_1_1_passenger57.html#a2c56fe25201a168d0d4229d08656f29b',1,'Roulette.Passenger57.PlaceBets()'],['../class_roulette_1_1_player.html#a8c741215dd9a8d5c61cb2882a0100faf',1,'Roulette.Player.PlaceBets()']]],
+  ['player',['Player',['../class_roulette_1_1_player.html#a209faafffe541c2a8e8d6bbe0908ea4a',1,'Roulette::Player']]],
+  ['player',['Player',['../class_roulette_1_1_player.html',1,'Roulette']]],
+  ['player_2ecs',['Player.cs',['../_player_8cs.html',1,'']]]
 ];

@@ -91,20 +91,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="class_roulette_1_1_outcome-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Roulette.Outcome Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Responsible for representing the various Outcomes for the <a class="el" href="namespace_roulette.html" title="A simulation of a roulette game. ">Roulette</a> game. Each <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is unique and c...">Outcome</a> is unique and comparable by its name. There cannot be mutiple odds for the same <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is unique and c...">Outcome</a>. Constructed through <a class="el" href="class_roulette_1_1_outcome.html#a88660a79aecfee12aba2904e35e12d3d" title="Get already existing Outcomes by name or create a new one by supplying the odds parameter. ">GetOrCreate()</a> which maintains a list of available Outcomes. Likewise, existing Outcomes are accessed by <a class="el" href="class_roulette_1_1_outcome.html#a88660a79aecfee12aba2904e35e12d3d" title="Get already existing Outcomes by name or create a new one by supplying the odds parameter. ">GetOrCreate()</a> to prevent duplication of an <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is unique and c...">Outcome</a> name with different odds.  
+<p>Responsible for representing the various Outcomes for the <a class="el" href="namespace_roulette.html" title="A simulation of a roulette game. ">Roulette</a> game. Each <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is comparable b...">Outcome</a> is comparable by its name.  
  <a href="class_roulette_1_1_outcome.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae3d56f23346c88e7258c2a1265284c58"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#ae3d56f23346c88e7258c2a1265284c58">GetWinAmount</a> (float amount)</td></tr>
-<tr class="memdesc:ae3d56f23346c88e7258c2a1265284c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the payout amount based on the odds.  <a href="#ae3d56f23346c88e7258c2a1265284c58">More...</a><br /></td></tr>
-<tr class="separator:ae3d56f23346c88e7258c2a1265284c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89aba5c31b33658aba80f2bb44900848"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#a89aba5c31b33658aba80f2bb44900848">Outcome</a> (string <a class="el" href="class_roulette_1_1_outcome.html#aca26dbcd233c3377bad7393ca2d9431a">name</a>, ushort <a class="el" href="class_roulette_1_1_outcome.html#a184b2d81dea11f5f13c38636598ea6a7">odds</a>)</td></tr>
+<tr class="memdesc:a89aba5c31b33658aba80f2bb44900848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructions a new outcome.  <a href="#a89aba5c31b33658aba80f2bb44900848">More...</a><br /></td></tr>
+<tr class="separator:a89aba5c31b33658aba80f2bb44900848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11647352d8ecb98050cfe88e266b6cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#ad11647352d8ecb98050cfe88e266b6cb">GetWinAmount</a> (ushort amount)</td></tr>
+<tr class="memdesc:ad11647352d8ecb98050cfe88e266b6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the payout amount based on the odds.  <a href="#ad11647352d8ecb98050cfe88e266b6cb">More...</a><br /></td></tr>
+<tr class="separator:ad11647352d8ecb98050cfe88e266b6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b8c62ce5c345a4ba0d9f9de76ea5bbf"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#a4b8c62ce5c345a4ba0d9f9de76ea5bbf">GetHashCode</a> ()</td></tr>
 <tr class="separator:a4b8c62ce5c345a4ba0d9f9de76ea5bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33fea2ba0c6ba51126b19afa58438e70"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#a33fea2ba0c6ba51126b19afa58438e70">Equals</a> (object obj)</td></tr>
@@ -116,17 +120,57 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a88660a79aecfee12aba2904e35e12d3d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_roulette_1_1_outcome.html">Outcome</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#a88660a79aecfee12aba2904e35e12d3d">GetOrCreate</a> (string name, ushort?odds=null)</td></tr>
-<tr class="memdesc:a88660a79aecfee12aba2904e35e12d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get already existing Outcomes by name or create a new one by supplying the odds parameter.  <a href="#a88660a79aecfee12aba2904e35e12d3d">More...</a><br /></td></tr>
-<tr class="separator:a88660a79aecfee12aba2904e35e12d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49ae1be21ffd8b4d061539d3a012ecbb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#a49ae1be21ffd8b4d061539d3a012ecbb">operator==</a> (<a class="el" href="class_roulette_1_1_outcome.html">Outcome</a> a, <a class="el" href="class_roulette_1_1_outcome.html">Outcome</a> b)</td></tr>
 <tr class="separator:a49ae1be21ffd8b4d061539d3a012ecbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06fc344b1e1f530994d7ba966df708d4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#a06fc344b1e1f530994d7ba966df708d4">operator!=</a> (<a class="el" href="class_roulette_1_1_outcome.html">Outcome</a> a, <a class="el" href="class_roulette_1_1_outcome.html">Outcome</a> b)</td></tr>
 <tr class="separator:a06fc344b1e1f530994d7ba966df708d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:aca26dbcd233c3377bad7393ca2d9431a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#aca26dbcd233c3377bad7393ca2d9431a">name</a><code> [get]</code></td></tr>
+<tr class="separator:aca26dbcd233c3377bad7393ca2d9431a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184b2d81dea11f5f13c38636598ea6a7"><td class="memItemLeft" align="right" valign="top">ushort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_outcome.html#a184b2d81dea11f5f13c38636598ea6a7">odds</a><code> [get]</code></td></tr>
+<tr class="separator:a184b2d81dea11f5f13c38636598ea6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Responsible for representing the various Outcomes for the <a class="el" href="namespace_roulette.html" title="A simulation of a roulette game. ">Roulette</a> game. Each <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is unique and c...">Outcome</a> is unique and comparable by its name. There cannot be mutiple odds for the same <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is unique and c...">Outcome</a>. Constructed through <a class="el" href="class_roulette_1_1_outcome.html#a88660a79aecfee12aba2904e35e12d3d" title="Get already existing Outcomes by name or create a new one by supplying the odds parameter. ">GetOrCreate()</a> which maintains a list of available Outcomes. Likewise, existing Outcomes are accessed by <a class="el" href="class_roulette_1_1_outcome.html#a88660a79aecfee12aba2904e35e12d3d" title="Get already existing Outcomes by name or create a new one by supplying the odds parameter. ">GetOrCreate()</a> to prevent duplication of an <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is unique and c...">Outcome</a> name with different odds. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Responsible for representing the various Outcomes for the <a class="el" href="namespace_roulette.html" title="A simulation of a roulette game. ">Roulette</a> game. Each <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is comparable b...">Outcome</a> is comparable by its name. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a89aba5c31b33658aba80f2bb44900848"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Roulette.Outcome.Outcome </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ushort&#160;</td>
+          <td class="paramname"><em>odds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructions a new outcome. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Unique name.</td></tr>
+    <tr><td class="paramname">odds</td><td>The payout odds.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a33fea2ba0c6ba51126b19afa58438e70"></a>
 <div class="memitem">
 <div class="memproto">
@@ -158,58 +202,14 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a88660a79aecfee12aba2904e35e12d3d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="class_roulette_1_1_outcome.html">Outcome</a> Roulette.Outcome.GetOrCreate </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ushort?&#160;</td>
-          <td class="paramname"><em>odds</em> = <code>null</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get already existing Outcomes by name or create a new one by supplying the odds parameter. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>Use only this if looking up the <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is unique and c...">Outcome</a>.</td></tr>
-    <tr><td class="paramname">odds</td><td>Required for creating a new <a class="el" href="class_roulette_1_1_outcome.html" title="Responsible for representing the various Outcomes for the Roulette game. Each Outcome is unique and c...">Outcome</a>. Optional for lookup.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ae3d56f23346c88e7258c2a1265284c58"></a>
+<a class="anchor" id="ad11647352d8ecb98050cfe88e266b6cb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float Roulette.Outcome.GetWinAmount </td>
+          <td class="memname">int Roulette.Outcome.GetWinAmount </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">ushort&#160;</td>
           <td class="paramname"><em>amount</em></td><td>)</td>
           <td></td>
         </tr>
@@ -310,6 +310,47 @@ Static Public Member Functions</h2></td></tr>
 
 <p><dl class="section return"><dt>Returns</dt><dd>User friendly string representation of this object.</dd></dl>
 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="aca26dbcd233c3377bad7393ca2d9431a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Roulette.Outcome.name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a184b2d81dea11f5f13c38636598ea6a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ushort Roulette.Outcome.odds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

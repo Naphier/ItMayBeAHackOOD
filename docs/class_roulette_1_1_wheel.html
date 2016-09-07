@@ -116,12 +116,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a02e68ab319058afe680439da1365da39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_roulette_1_1_bin.html">Bin</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_wheel.html#a02e68ab319058afe680439da1365da39">GetBinAtIndex</a> (int index)</td></tr>
 <tr class="memdesc:a02e68ab319058afe680439da1365da39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_roulette_1_1_bin.html" title="A collection of Outcomes to be associated with a bin number in Wheel. ">Bin</a> at a specific index. For testing purposes.  <a href="#a02e68ab319058afe680439da1365da39">More...</a><br /></td></tr>
 <tr class="separator:a02e68ab319058afe680439da1365da39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577d676a40f1fc8bebc3320be80a3bdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_roulette_1_1_outcome.html">Outcome</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roulette_1_1_wheel.html#a577d676a40f1fc8bebc3320be80a3bdf">GetOutcome</a> (string name)</td></tr>
+<tr class="memdesc:a577d676a40f1fc8bebc3320be80a3bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves outcome from the outcome dictionary by name.  <a href="#a577d676a40f1fc8bebc3320be80a3bdf">More...</a><br /></td></tr>
+<tr class="separator:a577d676a40f1fc8bebc3320be80a3bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Responsible for: </p>
 <ul>
 <li>Constructing and maintaining a list of bins (numbers that the wheel can land on) and their outcomes.</li>
-<li>Supplying a random bin to simulate a wheel spin. </li>
+<li>Supplying a random bin to simulate a wheel spin.</li>
+<li>Maintiains a unique list of outcomes available for this wheel. </li>
 </ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a819a3a44ef2d2a4acd6663a29e91a89d"></a>
@@ -242,6 +246,31 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the size of the bins array. </p>
 <dl class="section return"><dt>Returns</dt><dd>Size of the bins array.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a577d676a40f1fc8bebc3320be80a3bdf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_roulette_1_1_outcome.html">Outcome</a> Roulette.Wheel.GetOutcome </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves outcome from the outcome dictionary by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the outcome.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An outcome if found otherwise null.</dd></dl>
 
 </div>
 </div>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['stringextensions_2ecs',['StringExtensions.cs',['../_string_extensions_8cs.html',1,'']]]
+  ['outcome_2ecs',['Outcome.cs',['../_outcome_8cs.html',1,'']]],
+  ['outcome_5ftests_2ecs',['Outcome_Tests.cs',['../_outcome___tests_8cs.html',1,'']]]
 ];

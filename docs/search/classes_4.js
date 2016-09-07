@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wheel',['Wheel',['../class_roulette_1_1_wheel.html',1,'Roulette']]],
-  ['wheel_5ftests',['Wheel_Tests',['../class_roulette_1_1_tests_1_1_wheel___tests.html',1,'Roulette::Tests']]]
+  ['passenger57',['Passenger57',['../class_roulette_1_1_passenger57.html',1,'Roulette']]],
+  ['player',['Player',['../class_roulette_1_1_player.html',1,'Roulette']]]
 ];

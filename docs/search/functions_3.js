@@ -9,5 +9,6 @@ var searchData=
   ['displaylinebets',['DisplayLineBets',['../class_roulette_1_1_tests_1_1_bin_builder_u_s___tests.html#a1e9301470bc8af0938bb85ad086d9277',1,'Roulette::Tests::BinBuilderUS_Tests']]],
   ['displaysplitbets',['DisplaySplitBets',['../class_roulette_1_1_tests_1_1_bin_builder_u_s___tests.html#ae34752fed0fb751a0f26a8f32479459f',1,'Roulette::Tests::BinBuilderUS_Tests']]],
   ['displaystraightbets',['DisplayStraightBets',['../class_roulette_1_1_tests_1_1_bin_builder_u_s___tests.html#ae4279b188c8879f9d11fd2d05f54242d',1,'Roulette::Tests::BinBuilderUS_Tests']]],
-  ['displaystreetbets',['DisplayStreetBets',['../class_roulette_1_1_tests_1_1_bin_builder_u_s___tests.html#a2ef4bc0574c3abe9b0ff8afea3a60dbe',1,'Roulette::Tests::BinBuilderUS_Tests']]]
+  ['displaystreetbets',['DisplayStreetBets',['../class_roulette_1_1_tests_1_1_bin_builder_u_s___tests.html#a2ef4bc0574c3abe9b0ff8afea3a60dbe',1,'Roulette::Tests::BinBuilderUS_Tests']]],
+  ['displaytostringmethods',['DisplayToStringMethods',['../class_roulette_1_1_tests_1_1_table___tests.html#a66a3c834732181739c2dded00329a24c',1,'Roulette::Tests::Table_Tests']]]
 ];
